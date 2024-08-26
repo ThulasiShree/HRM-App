@@ -1,0 +1,11 @@
+.emp-btn{
+    border-radius: 5px;
+    border: 1px solid gray;
+    background: white;
+    color: gray;
+    text-decoration: none;
+}
+.emp-btn:hover{
+    border: 1px solid red;
+    color: red;
+}

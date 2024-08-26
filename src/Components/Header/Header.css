@@ -1,0 +1,25 @@
+@media (max-width: 360px) {
+    .search-text{
+        display: none;
+    }
+    .person-name{
+        display: none;
+    }
+    .header{
+        position: absolute;
+        top: 0;
+        left: 80px;
+    }
+    .msg-align{
+        position: relative;
+        left: 30px;
+        display: flex;
+        gap: 15px;
+    }
+    .personal-info{
+        position: relative;
+        left: 50px;
+        display: flex;
+        gap: 10px;
+    }
+}

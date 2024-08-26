@@ -1,0 +1,40 @@
+.sideBar {
+    position: fixed;
+    top: 0;
+    left: -240px; /* Hidden by default */
+    height: 100%;
+    background-color: #f8f9fa;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sideBar.open {
+    left: 0; /* Visible when open */
+}
+
+.menu-toggle-btn {
+    position: relative;
+    top: 5px;
+    left: 10px;
+    z-index: 1100;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.active-link li {
+    font-weight: bold; /* Optional: Make active link bold */
+    color: red;
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        position: static;
+        left: 0;
+        width: 240px;
+    }
+
+    .menu-toggle-btn {
+        display: none;
+    }
+}
