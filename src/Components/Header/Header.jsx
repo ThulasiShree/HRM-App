@@ -5,7 +5,7 @@ import PersonIcon from '../../Assets/person-img.png'
 
 const Header = () => {
   return (
-    <div className='sticky-top bg-light header d-flex flex-row py-3 border-0 ms-4'>
+    <div className='z-3 sticky-top bg-light header d-flex flex-row py-3 border-0 ms-4'>
       <div className="col-md-3 border rounded">
         <Form>
           <InputGroup>

@@ -12,18 +12,20 @@ const EmpDetail = () => {
     const [records, setRecords] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:3030/0")
-            .then( res => {
+        axios.get("http://localhost:3030/empdetails")
+            .then(res => {
+                const empdetails = res.data[0].empdetail;
+
                 // Check if the response data is valid and not empty
-                if (res.data && res.data.length > 0) {
-                    setColumn(Object.keys(res.data[0])); // Safely use Object.keys
-                    setRecords(res.data);
+                if (empdetails && empdetails.length > 0) {
+                    setColumn(Object.keys(empdetails[0])); // Safely use Object.keys
+                    setRecords(empdetails);
                 } else {
                     // Handle empty data case
                     setColumn([]);
                     setRecords([]);
                 }
-            
+
             })
             .catch(err => {
                 console.error(err);
@@ -73,53 +75,44 @@ const EmpDetail = () => {
 
                         <table className='table text-secondary mt-3'>
                             <thead>
-                                <th scope="col"></th>
-                                {column.map((c, i) => {
-                                    <th key={i} scope="col">
-                                        {c}
-                                    </th>
-                                })}
-
-
-
-                                {/* <th scope="col">
-                                    <tr>
+                                <tr>
+                                    <th scope='col'></th>
+                                    <th scope='col'></th>
+                                    <th scope="col">
                                         <div className="dropdown fs-6">
                                             <button className="border-0 bg-transparent dropdown-toggle fw-medium text-secondary" type="button">
                                                 Name
                                             </button>
                                         </div>
-                                    </tr>
-                                </th>
-                                <th scope="col">
-                                    <tr>
-                                        <div className="dropdown fs-6">
-                                            <button className="border-0 bg-transparent dropdown-toggle fw-medium text-secondary" type="button">
-                                                Join Date
-                                            </button>
-                                            <div className="dropdown-menu bg-transporent border-0">
-                                                <div className="dropdown-item d-flex gap-2">
-                                                    <input type="radio" name="dateType" id="joinedDate" value="joined-date" />
-                                                    <label for="joinedDate">Joined Date</label>
-                                                </div>
-                                                <div className="dropdown-item d-flex gap-2">
-                                                    <input type="radio" name="dateType" id="createdDate" value="created-date" />
-                                                    <label for="createdDate">Created Date</label>
-                                                </div>
-                                                <div className="dropdown-item d-flex gap-2">
-                                                    <input type="radio" name="dateType" id="relevedDate" value="releved-date" />
-                                                    <label for="relevedDate">Releved Date</label>
-                                                </div>
-                                                <div className="dropdown-item d-flex gap-2">
-                                                    <input type="radio" name="dateType" id="salaryHikeDate" value="salary-hike-date" />
-                                                    <label for="salaryHikeDate">Salary Hike Date</label>
+                                    </th>
+                                    <th scope="col">
+                                        <tr>
+                                            <div className="dropdown fs-6">
+                                                <button className="border-0 bg-transparent dropdown-toggle fw-medium text-secondary" type="button">
+                                                    Join Date
+                                                </button>
+                                                <div className="dropdown-menu bg-transporent border-0">
+                                                    <div className="dropdown-item d-flex gap-2">
+                                                        <input type="radio" name="dateType" id="joinedDate" value="joined-date" />
+                                                        <label for="joinedDate">Joined Date</label>
+                                                    </div>
+                                                    <div className="dropdown-item d-flex gap-2">
+                                                        <input type="radio" name="dateType" id="createdDate" value="created-date" />
+                                                        <label for="createdDate">Created Date</label>
+                                                    </div>
+                                                    <div className="dropdown-item d-flex gap-2">
+                                                        <input type="radio" name="dateType" id="relevedDate" value="releved-date" />
+                                                        <label for="relevedDate">Releved Date</label>
+                                                    </div>
+                                                    <div className="dropdown-item d-flex gap-2">
+                                                        <input type="radio" name="dateType" id="salaryHikeDate" value="salary-hike-date" />
+                                                        <label for="salaryHikeDate">Salary Hike Date</label>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </tr>
-                                </th>
-                                <th scope="col">
-                                    <tr>
+                                        </tr>
+                                    </th>
+                                    <th scope="col">
                                         <div className="dropdown fs-6">
                                             <button className="border-0 bg-transparent dropdown-toggle fw-medium text-secondary" type="button">
                                                 Designation
@@ -139,10 +132,8 @@ const EmpDetail = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                    </tr>
-                                </th>
-                                <th scope="col">
-                                    <tr>
+                                    </th>
+                                    <th scope="col">
                                         <div className="dropdown fs-6">
                                             <button className="border-0 bg-transparent dropdown-toggle fw-medium text-secondary" type="button">
                                                 Status
@@ -158,44 +149,61 @@ const EmpDetail = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                    </tr>
-                                </th>
-                                <th scope="col">
-                                    <tr>
+                                    </th>
+                                    <th scope="col" className='text-center'>
                                         <div className="dropdown fs-6">
                                             <button className="border-0 bg-transparent dropdown-toggle fw-medium text-secondary" type="button">
                                                 Options
                                             </button>
                                             <div className="dropdown-menu bg-transporent border-0">
                                                 <div className="dropdown-item d-flex gap-2">
-                                                    <input type="radio" name="dateType" id="joinedDate" value="joined-date" />
-                                                    <label for="joinedDate">Software Engineer</label>
+
                                                 </div>
                                                 <div className="dropdown-item d-flex gap-2">
-                                                    <input type="radio" name="dateType" id="createdDate" value="created-date" />
-                                                    <label for="createdDate">Manual Tester</label>
+
                                                 </div>
                                                 <div className="dropdown-item d-flex gap-2">
-                                                    <input type="radio" name="dateType" id="relevedDate" value="releved-date" />
-                                                    <label for="relevedDate">Automation Tester</label>
+
                                                 </div>
                                             </div>
                                         </div>
-                                    </tr>
-                                </th> */}
+                                    </th>
+                                </tr>
                             </thead>
                             <tbody>
                                 {
-                                    records.map((d, i) => {
+                                    records.map((d, i) => (
                                         <tr key={i}>
-                                            <td><input type="radio" name={`select-${i}`} /></td>
-                                            <td>{d.id}</td>
-                                            <td>{d.name}</td>
-                                            <td>{d.date}</td>
-                                            <td>{d.des}</td>
-                                            <td>{d.status}</td>
+                                            <td><input type="radio" className="fs-5" name={`select-${i}`} /></td>
+                                            <td className="fw-medium fs-6">{d.id}</td>
+                                            <td>
+                                                <div className="fw-medium fs-6">{d.name[0].ename}</div>
+                                                <div className="fs-6 text-secondary">{d.name[0].email}</div>
+                                            </td>
+                                            <td>
+                                                <div className="fs-6 text-secondary">
+                                                    {new Date(d.date.$date).toLocaleDateString()}
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div className="fs-6 text-secondary">
+                                                    {d.des}
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div className="fs-6 text-secondary">
+                                                    {d.status}
+                                                </div>
+                                            </td>
+                                            <td className='text-center'>
+                                                <div className="fs-6 text-secondary">
+                                                    <a href="">
+                                                        <i className="bi bi-three-dots text-secondary"></i>
+                                                    </a>
+                                                </div>
+                                            </td>
                                         </tr>
-                                    })
+                                    ))
                                 }
                                 {/* <tr>
                                     <th><input type="radio" name="" id="" /></th>

@@ -1,234 +1,220 @@
-[{
+{
   "empdetails": [
     {
-      // "_id": {
-      //   "$oid": "66c86fc740870120865daf79"
-      // },
-      "id": "11D001",
-      "date": {
-        "$date": "2023-01-01T00:00:00.000Z"
-      },
-      "des": "Software Engineer",
-      "status": "Confirmed",
-      "name": [
+      "empdetail": [
         {
-          "email": "magesh@Dotcod.in",
-          "ename": "MAGHESH"
+          "id": "11D001",
+          "date": {
+            "$date": "2023-01-01T00:00:00.000Z"
+          },
+          "des": "Software Engineer",
+          "status": "Confirmed",
+          "name": [
+            {
+              "email": "magesh@Dotcod.in",
+              "ename": "MAGHESH"
+            }
+          ]
+        },
+        {
+          "date": {
+            "$date": "2023-09-03T18:30:00.000Z"
+          },
+          "des": "Software Engineer",
+          "id": "11D002",
+          "status": "Probation",
+          "name": [
+            {
+              "email": "Rsahull@Dotcod.in",
+              "ename": "Tesla"
+            }
+          ]
+        },
+        {
+          "date": {
+            "$date": "2022-06-02T18:30:00.000Z"
+          },
+          "des": "Software Engineer",
+          "id": "11D003",
+          "status": "Confirmed",
+          "name": [
+            {
+              "email": "gm@Dotcod.in",
+              "ename": "GM"
+            }
+          ]
+        },
+        {
+          "date": {
+            "$date": "2023-01-01T18:30:00.000Z"
+          },
+          "des": "Software Engineer",
+          "id": "11D004",
+          "status": "Probation",
+          "name": [
+            {
+              "email": "aarp @Dotcod.in",
+              "ename": "AARP"
+            }
+          ]
+        },
+        {
+          "id": "11D005",
+          "name": [
+            {
+              "email": "@Dotcod.in",
+              "ename": "Disney "
+            }
+          ],
+          "date": {
+            "$date": "2023-09-03T18:30:00.000Z"
+          },
+          "des": "Software Engineer",
+          "status": "Confirmed"
+        },
+        {
+          "id": "11D006",
+          "name": [
+            {
+              "email": "@Dotcod.in",
+              "ename": "Prime Theraputics"
+            }
+          ],
+          "date": {
+            "$date": "2022-06-02T18:30:00.000Z"
+          },
+          "des": "Software Engineer",
+          "status": "Probation"
+        },
+        {
+          "id": "11D007",
+          "name": [
+            {
+              "email": "CODE@Dotcod.in",
+              "ename": "Match.com"
+            }
+          ],
+          "date": {
+            "$date": "2022-12-01T18:30:00.000Z"
+          },
+          "des": "Software Engineer",
+          "status": "Confirmed"
+        },
+        {
+          "id": "11D008",
+          "name": [
+            {
+              "email": "@Dotcod.in",
+              "ename": "Chevy "
+            }
+          ],
+          "date": {
+            "$date": "2023-04-18T18:30:00.000Z"
+          },
+          "des": "Software Engineer",
+          "status": "Probation"
         }
       ]
     },
     {
-      // "_id": {
-      //   "$oid": "66c875ae40870120865daf7e"
-      // },
-      "date": {
-        "$date": "2023-09-03T18:30:00.000Z"
-      },
-      "des": "Software Engineer",
-      "id": "11D002",
-      "status": "Probation",
-      "name": [
+      "empleaves": [
         {
-          "email": "Rsahull@Dotcod.in",
-          "ename": "Tesla"
-        }
-      ]
-    },
-    {
-      // "_id": {
-      //   "$oid": "66c8762240870120865daf7f"
-      // },
-      "date": {
-        "$date": "2022-06-02T18:30:00.000Z"
-      },
-      "des": "Software Engineer",
-      "id": "11D003",
-      "status": "Confirmed",
-      "name": [
+          "_id": {
+            "$oid": "66c874fa40870120865daf7b"
+          },
+          "days": "01",
+          "levtype": "Casual Leave",
+          "reason": "Not Well....",
+          "reqdate": "6/3/22",
+          "status": "Pending",
+          "name": [
+            {
+              "email": "magesh@Dotcod.in",
+              "ename": "MAGHESH"
+            }
+          ]
+        },
         {
-          "email": "gm@Dotcod.in",
-          "ename": "GM"
-        }
-      ]
-    },
-    {
-      // "_id": {
-      //   "$oid": "66c876c540870120865daf80"
-      // },
-      "date": {
-        "$date": "2023-01-01T18:30:00.000Z"
-      },
-      "des": "Software Engineer",
-      "id": "11D004",
-      "status": "Probation",
-      "name": [
+          "_id": {
+            "$oid": "66c87e7040870120865daf87"
+          },
+          "days": "04",
+          "levtype": "Sick Leave",
+          "reason": "Not Well....",
+          "reqdate": "12/2/22 - 16/02/22",
+          "status": "Approval",
+          "name": [
+            {
+              "email": "Rsahull@Dotcod.in",
+              "ename": "Tesla"
+            }
+          ]
+        },
         {
-          "email": "aarp @Dotcod.in",
-          "ename": "AARP"
-        }
-      ]
-    },
-    {
-      // "_id": {
-      //   "$oid": "66c87af340870120865daf82"
-      // },
-      "id": "11D005",
-      "name": [
+          "_id": {
+            "$oid": "66c87e7b40870120865daf88"
+          },
+          "days": "02",
+          "levtype": "Casual Leave",
+          "reason": "Sick leave",
+          "reqdate": "4/19/23",
+          "status": "Approval",
+          "name": [
+            {
+              "email": "gm@Dotcod.in",
+              "ename": "GM "
+            }
+          ]
+        },
         {
-          "email": "@Dotcod.in",
-          "ename": "Disney "
-        }
-      ],
-      "date": {
-        "$date": "2023-09-03T18:30:00.000Z"
-      },
-      "des": "Software Engineer",
-      "status": "Confirmed"
-    },
-    {
-      // "_id": {
-      //   "$oid": "66c87b1640870120865daf83"
-      // },
-      "id": "11D006",
-      "name": [
+          "_id": {
+            "$oid": "66c87e7f40870120865daf89"
+          },
+          "days": "03",
+          "levtype": "Sick Leave",
+          "reason": "Marriage Function",
+          "reqdate": "1/2/23",
+          "status": "Pending",
+          "name": [
+            {
+              "email": "aarp @Dotcod.in",
+              "ename": "AARP"
+            }
+          ]
+        },
         {
-          "email": "@Dotcod.in",
-          "ename": "Prime Theraputics"
-        }
-      ],
-      "date": {
-        "$date": "2022-06-02T18:30:00.000Z"
-      },
-      "des": "Software Engineer",
-      "status": "Probation"
-    },
-    {
-      // "_id": {
-      //   "$oid": "66c87b1940870120865daf84"
-      // },
-      "id": "11D007",
-      "name": [
+          "_id": {
+            "$oid": "66c87e8140870120865daf8a"
+          },
+          "days": "07",
+          "levtype": "Sick Leave",
+          "reason": "Marriage Function..",
+          "reqdate": "9/4/23",
+          "status": "Approval",
+          "name": [
+            {
+              "email": "@Dotcod.in",
+              "ename": "Disney "
+            }
+          ]
+        },
         {
-          "email": "CODE@Dotcod.in",
-          "ename": "Match.com"
-        }
-      ],
-      "date": {
-        "$date": "2022-12-01T18:30:00.000Z"
-      },
-      "des": "Software Engineer",
-      "status": "Confirmed"
-    },
-    {
-      // "_id": {
-      //   "$oid": "66c87b2040870120865daf85"
-      // },
-      "id": "11D008",
-      "name": [
-        {
-          "email": "@Dotcod.in",
-          "ename": "Chevy "
-        }
-      ],
-      "date": {
-        "$date": "2023-04-18T18:30:00.000Z"
-      },
-      "des": "Software Engineer",
-      "status": "Probation"
-    }
-  ]
-},
-{
-  "empleaves": [
-    {
-      "_id": {
-        "$oid": "66c874fa40870120865daf7b"
-      },
-      "days": "01",
-      "levtype": "Casual Leave",
-      "reason": "Not Well....",
-      "reqdate": "6/3/22",
-      "name": [
-        {
-          "email": "magesh@Dotcod.in",
-          "ename": "MAGHESH"
-        }
-      ]
-    },
-    {
-      "_id": {
-        "$oid": "66c87e7040870120865daf87"
-      },
-      "days": "04",
-      "levtype": "Sick Leave",
-      "reason": "Not Well....",
-      "reqdate": "12/2/22 - 16/02/22",
-      "name": [
-        {
-          "email": "Rsahull@Dotcod.in",
-          "ename": "Tesla"
-        }
-      ]
-    },
-    {
-      "_id": {
-        "$oid": "66c87e7b40870120865daf88"
-      },
-      "days": "02",
-      "levtype": "Casual Leave",
-      "reason": "Sick leave",
-      "reqdate": "4/19/23",
-      "name": [
-        {
-          "email": "gm@Dotcod.in",
-          "ename": "GM "
-        }
-      ]
-    },
-    {
-      "_id": {
-        "$oid": "66c87e7f40870120865daf89"
-      },
-      "days": "03",
-      "levtype": "Sick Leave",
-      "reason": "Marriage Function",
-      "reqdate": "1/2/23",
-      "name": [
-        {
-          "email": "aarp @Dotcod.in",
-          "ename": "AARP"
-        }
-      ]
-    },
-    {
-      "_id": {
-        "$oid": "66c87e8140870120865daf8a"
-      },
-      "days": "07",
-      "levtype": "Sick Leave",
-      "reason": "Marriage Function..",
-      "reqdate": "9/4/23",
-      "name": [
-        {
-          "email": "@Dotcod.in",
-          "ename": "Disney "
-        }
-      ]
-    },
-    {
-      "_id": {
-        "$oid": "66c87e8540870120865daf8b"
-      },
-      "days": "09",
-      "levtype": "Sick Leave",
-      "reason": "Marriage Function..",
-      "reqdate": "12/2/22 - 16/02/22",
-      "name": [
-        {
-          "email": "@Dotcod.in",
-          "ename": "Prime Theraputics"
+          "_id": {
+            "$oid": "66c87e8540870120865daf8b"
+          },
+          "days": "09",
+          "levtype": "Sick Leave",
+          "reason": "Marriage Function..",
+          "reqdate": "12/2/22 - 16/02/22",
+          "status": "Approval",
+          "name": [
+            {
+              "email": "@Dotcod.in",
+              "ename": "Prime Theraputics"
+            }
+          ]
         }
       ]
     }
   ]
-}]
+}
