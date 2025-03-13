@@ -6,32 +6,9 @@ import Dash1 from '../Assets/dash-img1.png'
 import Dash2 from '../Assets/dash-img2.png'
 import People1 from '../Assets/people1.png'
 import People2 from '../Assets/people2.png'
-
-import Calendar, { MonthView } from 'react-calendar'
-import 'react-calendar/dist/Calendar.css'
+import CalenderComponent from '../Components/Dashboard/CalenderComponent'
 
 const Dashboard = () => {
-
-  const [date, setDate] = useState(new Date())
-
-  const onChange = (newDate) => {
-    setDate(newDate)
-  }
-
-  const formatShortWeekday = (locale, date) => {
-    const days = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
-    return days[date.getDay()];
-  };
-
-  const getPrevMonth = (currentDate) => {
-    const prevMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1);
-    return prevMonth.toLocaleString('default', { month: 'long' });
-  };
-
-  const getNextMonth = (currentDate) => {
-    const nextMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1);
-    return nextMonth.toLocaleString('default', { month: 'long' });
-  };
 
   return (
     <div className='container-fluid border'>
@@ -129,14 +106,7 @@ const Dashboard = () => {
               <div className="calender-section p-2">
                 <span className='fs-6 fw-medium'>Calendar</span>
                 <div className="p-3 m-2 text-center" >
-                  <Calendar onChange={onChange} value={date}
-                    formatMonthYear=
-                    {(locale, date) =>
-                      date.toLocaleDateString('en-US', { month: 'long' })
-                    }
-                    nextLabel={getNextMonth(date)} prevLabel={getPrevMonth(date)}
-                    formatShortWeekday={formatShortWeekday}
-                    className="border-0 text-decoration-none" />
+                  <CalenderComponent/>
                 </div>
               </div>
               <div className="bday-cal-section p-2">
